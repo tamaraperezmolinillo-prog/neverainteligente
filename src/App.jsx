@@ -1015,7 +1015,8 @@ return (
         fontWeight: "bold"
       }}
     >
-      🏠 Nevera Inteligente
+      🏠 Nevera Inteligente v2
+      
     </div>
 
     {/* CONTENIDO */}
