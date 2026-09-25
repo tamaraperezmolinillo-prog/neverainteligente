@@ -2400,14 +2400,12 @@ maxWidth: 420,
     }
   }}
   style={{
-  width: "calc(100% - 4px)",
-  height: 56,
-  display: "block",
-  margin: "0 auto",
-  borderRadius: 18,
-  border: "2px solid #E5E7EB",
-  backgroundColor: "#FFFFFF",
-  color: "#111827",
+  width: "100%",
+  height: 72,
+  padding: "0 24px",
+  borderRadius: 36,
+  border: "2px solid #D1D5DB",
+  background: "#fff",
   fontSize: 17,
   boxSizing: "border-box"
 }}
@@ -2436,14 +2434,12 @@ maxWidth: 420,
     setFechaTarea(e.target.value)
   }
   style={{
-  width: "calc(100% - 4px)",
-  height: 56,
-  display: "block",
-  margin: "0 auto",
-  borderRadius: 18,
-  border: "2px solid #E5E7EB",
-  backgroundColor: "#FFFFFF",
-  color: "#111827",
+  width: "100%",
+  height: 72,
+  padding: "0 24px",
+  borderRadius: 36,
+  border: "2px solid #D1D5DB",
+  background: "#fff",
   fontSize: 17,
   boxSizing: "border-box"
 }}
@@ -2473,14 +2469,12 @@ maxWidth: 420,
     setHoraTarea(e.target.value)
   }
 style={{
-  width: "calc(100% - 4px)",
-  height: 56,
-  display: "block",
-  margin: "0 auto",
-  borderRadius: 18,
-  border: "2px solid #E5E7EB",
-  backgroundColor: "#FFFFFF",
-  color: "#111827",
+  width: "100%",
+  height: 72,
+  padding: "0 24px",
+  borderRadius: 36,
+  border: "2px solid #D1D5DB",
+  background: "#fff",
   fontSize: 17,
   boxSizing: "border-box"
 }}
@@ -2492,14 +2486,12 @@ style={{
       <button
   onClick={añadirTarea}
   style={{
-  width: "calc(100% - 4px)",
-  height: 56,
-  display: "block",
-  margin: "0 auto",
-  borderRadius: 18,
-  border: "2px solid #E5E7EB",
-  backgroundColor: "#FFFFFF",
-  color: "#111827",
+  width: "100%",
+  height: 72,
+  padding: "0 24px",
+  borderRadius: 36,
+  border: "2px solid #D1D5DB",
+  background: "#fff",
   fontSize: 17,
   boxSizing: "border-box"
 }}
@@ -2515,15 +2507,15 @@ style={{
 
     <div
       style={{
-        background: "white",
-        width: "calc(100% - 4px)",
-        padding: 30,
-        borderRadius: 24,
-        textAlign: "center",
-        color: "#666",
-        boxShadow:
-          "0 4px 12px rgba(0,0,0,0.08)"
-      }}
+  width: "100%",
+  height: 72,
+  padding: "0 24px",
+  borderRadius: 36,
+  border: "2px solid #D1D5DB",
+  background: "#fff",
+  fontSize: 17,
+  boxSizing: "border-box"
+}}
     >
       No hay tareas
     </div>
@@ -2694,19 +2686,15 @@ style={{
     setPantalla("nevera")
   }
   style={{
-    flex: 1,
-    padding: 8,
-    border: "none",
-    background:
-      pantalla === "nevera"
-        ? "#f79fcc"
-        : "#ffdceb",
-    fontWeight:
-      pantalla === "nevera"
-        ? "bold"
-        : "normal",
-    transition: "0.2s"
-  }}
+  flex: 1,
+  padding: 8,
+  background:
+    pantalla === "nevera"
+      ? "#ffb4f9"
+      : "#ffe8f5",
+  border: "1px solid #e8c3e7",
+  fontWeight: "bold"
+}}
 
       >
         🥛
@@ -2769,7 +2757,7 @@ style={{
   fontWeight: "bold"
 }}
       >
-        ✅
+        📝
         <br />
         Tareas
       </button>
