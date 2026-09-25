@@ -1820,12 +1820,15 @@ return (
        style={{
   background: "white",
   borderRadius: 20,
-  minHeight: 120,
+  height: 170,
   padding: 10,
   cursor: "pointer",
   boxShadow:
     "0 4px 12px rgba(0,0,0,0.08)",
-  transition: "0.2s"
+  transition: "0.2s",
+  overflow: "hidden",
+  display: "flex",
+  flexDirection: "column"
 }}
       >
 
@@ -1883,6 +1886,9 @@ return (
   );
 
 })
+
+.slice(0, 3)
+
 .map((item) => (
 
   <div
@@ -1929,6 +1935,51 @@ color:
   </div>
 
 ))}
+
+{[
+  ...eventos.filter(
+    (evento) =>
+      evento.fecha === dia
+  ),
+  ...tareas.filter(
+    (tarea) =>
+      tarea.fecha === dia &&
+      !tarea.hecha
+  ),
+  ...productos.filter(
+    (producto) =>
+      producto.caducidad === dia
+  )
+].length > 3 && (
+
+  <div
+    style={{
+      fontSize: 11,
+      fontWeight: "bold",
+      color: "#4CAF50",
+      marginTop: 4
+    }}
+  >
+    +
+    {[
+      ...eventos.filter(
+        (evento) =>
+          evento.fecha === dia
+      ),
+      ...tareas.filter(
+        (tarea) =>
+          tarea.fecha === dia &&
+          !tarea.hecha
+      ),
+      ...productos.filter(
+        (producto) =>
+          producto.caducidad === dia
+      )
+    ].length - 3}
+    {" "}más
+  </div>
+
+)}
       </div>
 
     ))}
