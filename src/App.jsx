@@ -995,6 +995,7 @@ return (
   <div
     style={{
       minHeight: "100vh",
+      paddingTop: 85,
       background: "#f3f4f6",
       fontFamily: "Arial, sans-serif",
       display: "flex",
@@ -1002,22 +1003,7 @@ return (
     }}
   >
 
-    {/* CABECERA */}
-
-    <div
-      style={{
-        background:
-          "linear-gradient(135deg,#4CAF50,#2E7D32)",
-        color: "white",
-        padding: 20,
-        textAlign: "center",
-        fontSize: 30,
-        fontWeight: "bold"
-      }}
-    >
-      🏠 Nevera Inteligente 
-      
-    </div>
+    
 
     {/* CONTENIDO */}
 
@@ -2690,12 +2676,16 @@ style={{
 
     <div
   style={{
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 75,
     display: "flex",
     background: "white",
-    borderTop: "1px solid #ddd",
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    boxShadow: "0 -4px 12px rgba(0,0,0,0.08)"
+    borderBottom: "1px solid #ddd",
+    boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+    zIndex: 9999
   }}
 >
 
@@ -2705,12 +2695,12 @@ style={{
   }
   style={{
     flex: 1,
-    padding: 18,
+    padding: 8,
     border: "none",
     background:
       pantalla === "nevera"
-        ? "#f4dbe8"
-        : "white",
+        ? "#f79fcc"
+        : "#ffdceb",
     fontWeight:
       pantalla === "nevera"
         ? "bold"
@@ -2730,7 +2720,7 @@ style={{
         }
        style={{
   flex: 1,
-  padding: 18,
+  padding: 8,
   background:
     pantalla === "compra"
       ? "#9FE3B0"
@@ -2750,7 +2740,7 @@ style={{
         }
         style={{
   flex: 1,
-  padding: 18,
+  padding: 8,
   background:
     pantalla === "calendario"
       ? "#A9D4FF"
@@ -2770,7 +2760,7 @@ style={{
         }
         style={{
   flex: 1,
-  padding: 18,
+  padding: 8,
   background:
     pantalla === "tareas"
       ? "#CDB4FF"
