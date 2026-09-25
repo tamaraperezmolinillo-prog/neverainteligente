@@ -1818,17 +1818,15 @@ return (
 
 }}
        style={{
-  background: "white",
-  borderRadius: 20,
-  height: 170,
-  padding: 10,
-  cursor: "pointer",
-  boxShadow:
-    "0 4px 12px rgba(0,0,0,0.08)",
-  transition: "0.2s",
+  background: "#fff",
+  borderRadius: 14,
+  height: 90,
+  width: "100%",
+  padding: 4,
   overflow: "hidden",
   display: "flex",
-  flexDirection: "column"
+  flexDirection: "column",
+  cursor: "pointer"
 }}
       >
 
