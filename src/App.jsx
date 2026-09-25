@@ -1015,7 +1015,7 @@ return (
         fontWeight: "bold"
       }}
     >
-      🏠 Nevera Inteligente v2
+      🏠 Nevera Inteligente 
       
     </div>
 
@@ -1029,103 +1029,113 @@ return (
     >
 
       {pantalla === "nevera" && (
-
+<div
+  style={{
+    background: "#F0FDF4",
+    minHeight: "100vh",
+    padding: 15
+  }}
+>
 <>
-  <h2 style={{ marginBottom: 20 }}>
+
+  <h2
+    style={{
+      marginBottom: 20,
+      textAlign: "center",
+      fontSize: 28
+    }}
+  >
     🥛 Nevera
   </h2>
 
-{/* AVISO CADUCIDADES */}
+  {/* AVISO CADUCIDADES */}
 
-<div
-  style={{
-    background:
-      urgente > 0
-        ? "#f8d7da"
-        : atencion > 0
-        ? "#fff3cd"
-        : "#d4edda",
-
-    borderRadius: 20,
-    padding: 18,
-    marginBottom: 25,
-    fontWeight: "bold",
-    fontSize: 18,
-    textAlign: "center",
-    boxShadow:
-      "0 4px 10px rgba(0,0,0,0.08)"
-  }}
->
-
-  {urgente > 0 && (
-    <>
-      🔴 Tienes {urgente} productos que caducan en menos de 3 días
-    </>
-  )}
-
-  {urgente === 0 &&
-    atencion > 0 && (
-      <>
-        🟡 Tienes {atencion} productos que caducan esta semana
-      </>
-    )}
-
-  {urgente === 0 &&
-    atencion === 0 && (
-      <>
-        🟢 No hay productos próximos a caducar
-      </>
-    )}
-
-</div>
-
-  {/* HERRAMIENTAS NEVERA */}
-
-<div
-  style={{
-    background: "#ffffff",
-    boxShadow: "0 3px 10px rgba(0,0,0,0.08)",
-    border: "1px solid #e5e7eb",
-    padding: 20,
-    borderRadius: 20,
-    marginBottom: 25,
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 10,
-    alignItems: "center"
-  }}
->
-
-  <h3
+  <div
     style={{
-      width: "100%",
-      margin: 0,
-      color: "#374151"
+      background:
+        urgente > 0
+          ? "#fde2e4"
+          : atencion > 0
+          ? "#fff4d6"
+          : "#d8f3dc",
+
+      borderRadius: 24,
+      padding: 20,
+      marginBottom: 25,
+      fontWeight: "600",
+      fontSize: 16,
+      lineHeight: 1.5,
+      textAlign: "center",
+      boxShadow:
+        "0 4px 12px rgba(0,0,0,0.08)"
     }}
   >
-    🔍 Buscar
-  </h3>
 
-  <input
-    placeholder="Buscar producto..."
-    value={busquedaNevera}
-    onChange={(e) =>
-      setBusquedaNevera(
-        e.target.value
-      )
-    }
+    {urgente > 0 && (
+      <>
+        🔴 Tienes {urgente} productos que caducan en menos de 3 días
+      </>
+    )}
+
+    {urgente === 0 &&
+      atencion > 0 && (
+        <>
+          🟡 Tienes {atencion} productos que caducan esta semana
+        </>
+      )}
+
+    {urgente === 0 &&
+      atencion === 0 && (
+        <>
+          🟢 No hay productos próximos a caducar
+        </>
+      )}
+
+  </div>
+
+  {/* BUSCADOR */}
+
+  <div
     style={{
-      flex: 1,
-      minWidth: 250,
-      padding: 12,
-      borderRadius: 12,
-      border: "1px solid #ddd"
+      background: "#ffffff",
+      boxShadow:
+        "0 4px 12px rgba(0,0,0,0.08)",
+      border: "1px solid #e5e7eb",
+      padding: 20,
+      borderRadius: 20,
+      marginBottom: 25
     }}
-  />
+  >
 
- 
+    <h3
+      style={{
+        marginTop: 0,
+        marginBottom: 12,
+        color: "#374151"
+      }}
+    >
+      🔍 Buscar producto
+    </h3>
 
-</div>
+    <input
+      placeholder="Buscar producto..."
+      value={busquedaNevera}
+      onChange={(e) =>
+        setBusquedaNevera(
+          e.target.value
+        )
+      }
+      style={{
+        width: "100%",
+        padding: 14,
+        borderRadius: 14,
+        border: "1px solid #ddd",
+        fontSize: 16,
+        boxSizing: "border-box"
+      }}
+    />
+
+  </div>
 
   {/* TABLA */}
 
@@ -1133,143 +1143,167 @@ return (
     style={{
       background: "white",
       borderRadius: 20,
-      overflow: "hidden"
+      overflowX: "auto",
+      boxShadow:
+        "0 4px 12px rgba(0,0,0,0.08)"
     }}
   >
 
     <table
-  style={{
-    width: "100%",
-    borderCollapse: "collapse",
-    textAlign: "center"
-  }}
->
+      style={{
+        width: "100%",
+        minWidth: "700px",
+        borderCollapse: "collapse",
+        textAlign: "center"
+      }}
+    >
+
       <thead>
 
-  <tr
-    style={{
-      background: "#f3f4f6"
-    }}
-  >
-    <th style={{ padding: 14 }}>Producto</th>
-    <th style={{ padding: 14 }}>Ubicación</th>
-    <th style={{ padding: 14 }}>Cantidad</th>
-    <th style={{ padding: 14 }}>Caducidad</th>
-    <th style={{ padding: 14 }}>Días</th>
-    <th style={{ padding: 14 }}>Acción</th>
-  </tr>
+        <tr
+          style={{
+            background: "#f3f4f6"
+          }}
+        >
+          <th style={{ padding: 14 }}>
+            Producto
+          </th>
 
-</thead>
+          <th style={{ padding: 14 }}>
+            Ubicación
+          </th>
+
+          <th style={{ padding: 14 }}>
+            Cantidad
+          </th>
+
+          <th style={{ padding: 14 }}>
+            Caducidad
+          </th>
+
+          <th style={{ padding: 14 }}>
+            Días
+          </th>
+
+          <th style={{ padding: 14 }}>
+            Acción
+          </th>
+        </tr>
+
+      </thead>
 
       <tbody>
 
-  {productos
-    .filter((producto) =>
-      producto.nombre
-        .toLowerCase()
-        .includes(
-          busquedaNevera.toLowerCase()
-        )
-    )
-    .map((producto) => {
+        {productos
+          .filter((producto) =>
+            producto.nombre
+              .toLowerCase()
+              .includes(
+                busquedaNevera.toLowerCase()
+              )
+          )
+          .map((producto) => {
 
-      const estado =
-        obtenerEstado(
-          producto.caducidad
-        );
+            const estado =
+              obtenerEstado(
+                producto.caducidad
+              );
 
-      return (
+            return (
 
               <tr
                 key={producto.id}
                 style={{
-                  background: estado.color,
-                  borderBottom: "1px solid #e5e7eb"
+                  background:
+                    estado.color,
+                  borderBottom:
+                    "1px solid #e5e7eb"
                 }}
               >
 
+                <td
+                  style={{
+                    padding: 12,
+                    fontWeight: 600
+                  }}
+                >
+                  {estado.emoji}{" "}
+                  {producto.nombre}
+                </td>
+
                 <td style={{ padding: 12 }}>
-                {estado.emoji}{" "}
-                {producto.nombre}
-              </td>
 
-              <td style={{ padding: 12 }}>
-                {producto.ubicacion === "Nevera" &&
-                  "🥛 Nevera"}
+                  {producto.ubicacion === "Nevera" &&
+                    "🥛 Nevera"}
 
-                {producto.ubicacion === "Congelador" &&
-                  "❄️ Congelador"}
+                  {producto.ubicacion === "Congelador" &&
+                    "❄️ Congelador"}
 
-                {producto.ubicacion === "Armario" &&
-                  "🥫 Armario"}
-              
-              
-              </td>
+                  {producto.ubicacion === "Armario" &&
+                    "🥫 Armario"}
 
-              <td>
+                </td>
 
-                
+                <td>
 
                   <button
-  onClick={() =>
-    cambiarCantidad(
-      producto.id,
-      producto.cantidad - 1
-    )
-  }
-  style={{
-    width: 28,
-    height: 28,
-    borderRadius: "50%",
-    border: "1px solid #d1d5db",
-    background: "#ffffff",
-    cursor: "pointer",
-    fontSize: 14,
-    color: "#6b7280"
-  }}
->
-  −
-</button>
+                    onClick={() =>
+                      cambiarCantidad(
+                        producto.id,
+                        producto.cantidad - 1
+                      )
+                    }
+                    style={{
+                      width: 28,
+                      height: 28,
+                      borderRadius: "50%",
+                      border:
+                        "1px solid #d1d5db",
+                      background:
+                        "#ffffff",
+                      cursor: "pointer"
+                    }}
+                  >
+                    −
+                  </button>
 
-<span
-  style={{
-    margin: "0 10px",
-    fontWeight: "600",
-    minWidth: 20,
-    display: "inline-block"
-  }}
->
-  {producto.cantidad}
-</span>
+                  <span
+                    style={{
+                      margin: "0 10px",
+                      fontWeight: "600"
+                    }}
+                  >
+                    {producto.cantidad}
+                  </span>
 
-<button
-  onClick={() =>
-    cambiarCantidad(
-      producto.id,
-      producto.cantidad + 1
-    )
-  }
-  style={{
-    width: 28,
-    height: 28,
-    borderRadius: "50%",
-    border: "1px solid #d1d5db",
-    background: "#ffffff",
-    cursor: "pointer",
-    fontSize: 14,
-    color: "#6b7280"
-  }}
->
-  +
-</button>
+                  <button
+                    onClick={() =>
+                      cambiarCantidad(
+                        producto.id,
+                        producto.cantidad + 1
+                      )
+                    }
+                    style={{
+                      width: 28,
+                      height: 28,
+                      borderRadius: "50%",
+                      border:
+                        "1px solid #d1d5db",
+                      background:
+                        "#ffffff",
+                      cursor: "pointer"
+                    }}
+                  >
+                    +
+                  </button>
 
                 </td>
 
                 <td style={{ padding: 12 }}>
-              {formatearFecha(
-                producto.caducidad
-              )}
-            </td>
+                  {formatearFecha(
+                    producto.caducidad
+                  )}
+                </td>
 
                 <td>
 
@@ -1291,8 +1325,19 @@ return (
                         producto.id
                       )
                     }
+                    style={{
+                      background:
+                        "#4CAF50",
+                      color: "white",
+                      border: "none",
+                      borderRadius: 10,
+                      padding:
+                        "8px 12px",
+                      cursor: "pointer",
+                      fontWeight: "600"
+                    }}
                   >
-                    Consumir 1
+                    Consumir
                   </button>
 
                 </td>
@@ -1301,8 +1346,7 @@ return (
 
             );
 
-          }
-        )}
+          })}
 
       </tbody>
 
@@ -1311,15 +1355,24 @@ return (
   </div>
 
 </>
-
+</div>
 )}
 
-  {pantalla === "compra" && (
+ {pantalla === "compra" && (
 
-<>
+<div
+  style={{
+    background: "#F0FDF4",
+    minHeight: "100vh",
+    padding: 15
+  }}
+>
+
   <h2
     style={{
-      marginBottom: 20
+      marginBottom: 20,
+      textAlign: "center",
+      fontSize: 28
     }}
   >
     🛒 Lista de la compra
@@ -1331,86 +1384,110 @@ return (
     style={{
       background: "white",
       padding: 20,
-      borderRadius: 20,
+      borderRadius: 24,
       marginBottom: 20,
-      display: "flex",
-      gap: 10,
-      alignItems: "center",
-      boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
+      boxShadow:
+        "0 4px 12px rgba(0,0,0,0.08)"
     }}
   >
 
-    <input
-  placeholder="Producto"
-  value={nuevoCompra}
-  onChange={(e) =>
-    setNuevoCompra(
-      e.target.value
-    )
-  }
-  style={{
-    flex: 1,
-    padding: 12,
-    borderRadius: 12,
-    border: "1px solid #ddd"
-  }}
-/>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 12
+      }}
+    >
 
-<label
-  style={{
-    background: "#ff9800",
-    color: "white",
-    padding: "12px 18px",
-    borderRadius: 12,
-    cursor: "pointer",
-    fontWeight: "bold"
-  }}
->
-  📦 Escanear
+      <input
+        placeholder="Producto"
+        value={nuevoCompra}
+        onChange={(e) =>
+          setNuevoCompra(
+            e.target.value
+          )
+        }
+        style={{
+          width: "100%",
+          padding: 14,
+          borderRadius: 14,
+          border: "1px solid #ddd",
+          fontSize: 16,
+          boxSizing: "border-box"
+        }}
+      />
 
-  <input
-    type="file"
-    accept="image/*"
-    capture="environment"
-    onChange={escanearFoto}
-    hidden
-  />
-</label>
+      <div
+        style={{
+          display: "flex",
+          gap: 10
+        }}
+      >
 
-<input
-  type="number"
-  min="1"
-  value={cantidadDeseada}
-  onChange={(e) =>
-    setCantidadDeseada(
-      Number(e.target.value)
-    )
-  }
-  style={{
-    width: 80,
-    padding: 12,
-    borderRadius: 12,
-    border: "1px solid #ddd"
-  }}
-/>
+        <label
+          style={{
+            flex: 1,
+            background: "#ff9800",
+            color: "white",
+            padding: "14px",
+            borderRadius: 14,
+            cursor: "pointer",
+            fontWeight: "bold",
+            textAlign: "center"
+          }}
+        >
+          📦 Escanear
 
-<button
-  onClick={añadirCompra}
-  style={{
-    background: "#4CAF50",
-    color: "white",
-    border: "none",
-    borderRadius: 12,
-    padding: "12px 20px",
-    cursor: "pointer"
-  }}
->
-  ➕
-</button>
+          <input
+            type="file"
+            accept="image/*"
+            capture="environment"
+            onChange={escanearFoto}
+            hidden
+          />
+        </label>
+
+        <input
+          type="number"
+          min="1"
+          value={cantidadDeseada}
+          onChange={(e) =>
+            setCantidadDeseada(
+              Number(e.target.value)
+            )
+          }
+          style={{
+            width: 80,
+            padding: 14,
+            borderRadius: 14,
+            border: "1px solid #ddd",
+            textAlign: "center"
+          }}
+        />
+
+      </div>
+
+      <button
+        onClick={añadirCompra}
+        style={{
+          background: "#4CAF50",
+          color: "white",
+          border: "none",
+          borderRadius: 14,
+          padding: "14px",
+          cursor: "pointer",
+          fontSize: 16,
+          fontWeight: "bold"
+        }}
+      >
+        ➕ Añadir producto
+      </button>
+
+    </div>
 
   </div>
 
-  {/* SI NO HAY PRODUCTOS */}
+  {/* SIN PRODUCTOS */}
 
   {compra.length === 0 ? (
 
@@ -1418,9 +1495,11 @@ return (
       style={{
         background: "white",
         padding: 30,
-        borderRadius: 20,
+        borderRadius: 24,
         textAlign: "center",
-        color: "#666"
+        color: "#666",
+        boxShadow:
+          "0 4px 12px rgba(0,0,0,0.08)"
       }}
     >
       No hay productos pendientes
@@ -1431,14 +1510,17 @@ return (
     <div
       style={{
         background: "white",
-        borderRadius: 20,
-        overflow: "hidden"
+        borderRadius: 24,
+        overflowX: "auto",
+        boxShadow:
+          "0 4px 12px rgba(0,0,0,0.08)"
       }}
     >
 
       <table
         style={{
           width: "100%",
+          minWidth: "500px",
           borderCollapse: "collapse"
         }}
       >
@@ -1450,6 +1532,7 @@ return (
               background: "#f3f4f6"
             }}
           >
+
             <th
               style={{
                 padding: 15,
@@ -1496,17 +1579,19 @@ return (
               <td
                 style={{
                   textAlign: "center",
-                  padding: 15
+                  padding: 15,
+                  fontWeight: 600
                 }}
               >
-                {item.nombre}
+                🛒 {item.nombre}
               </td>
 
               <td
                 style={{
                   textAlign: "center",
                   padding: 15,
-                  fontWeight: "bold"
+                  fontWeight: "bold",
+                  fontSize: 18
                 }}
               >
                 {item.cantidad || 1}
@@ -1589,30 +1674,41 @@ return (
 
   )}
 
-</>
+</div>
 
 )}
-
      {pantalla === "calendario" && (
 
-<>
-  <h2
-    style={{
-      marginBottom: 20
-    }}
+<div
+  style={{
+    background: "#F0FDF4",
+    minHeight: "100vh",
+    padding: 15
+  }}
   >
-    📅 Calendario familiar
-  </h2>
+  <h2
+  style={{
+    marginBottom: 20,
+    textAlign: "center",
+    fontSize: 28,
+    fontWeight: "700",
+    color: "#111827"
+  }}
+>
+  📅 Calendario familiar
+</h2>
 
  <div
   style={{
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 20,
+    marginBottom: 25,
     background: "white",
-    padding: 15,
-    borderRadius: 20
+    padding: 20,
+    borderRadius: 24,
+    boxShadow:
+      "0 4px 12px rgba(0,0,0,0.08)"
   }}
 >
 
@@ -1634,21 +1730,27 @@ return (
 
     }}
     style={{
-      border: "none",
-      background: "#f3f4f6",
-      padding: "10px 15px",
-      borderRadius: 10,
-      cursor: "pointer"
-    }}
+  width: 48,
+  height: 48,
+  borderRadius: "50%",
+  border: "none",
+  background: "#f3f4f6",
+  cursor: "pointer",
+  fontSize: 18,
+  fontWeight: "bold"
+}}
   >
     ◀
   </button>
 
   <h3
-    style={{
-      margin: 0,
-      textTransform: "capitalize"
-    }}
+   style={{
+  margin: 0,
+  textTransform: "capitalize",
+  fontSize: 22,
+  fontWeight: "700",
+  color: "#111827"
+}}
   >
     {new Date(
       añoActual,
@@ -1693,11 +1795,12 @@ return (
 </div>
 
  <div
-  style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(7, 1fr)",
-    gap: window.innerWidth < 600 ? 4 : 10
-  }}
+ style={{
+  display: "grid",
+  gridTemplateColumns:
+    "repeat(7, 1fr)",
+  gap: 8
+}}
 >
 
     {["L","M","X","J","V","S","D"].map(
@@ -1706,10 +1809,12 @@ return (
         <div
           key={dia}
           style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            padding: 10
-          }}
+  textAlign: "center",
+  fontWeight: "700",
+  padding: 10,
+  color: "#6b7280",
+  fontSize: 13
+}}
         >
           {dia}
         </div>
@@ -1726,29 +1831,25 @@ return (
       abrirDia(dia);
 
 }}
-        style={{
-          background: "white",
-          borderRadius: 15,
-          minHeight:
-  window.innerWidth < 600
-    ? 70
-    : 120,
-          padding: 10,
-          cursor: "pointer",
-          boxShadow:
-            "0 2px 6px rgba(0,0,0,0.08)"
-        }}
+       style={{
+  background: "white",
+  borderRadius: 20,
+  minHeight: 120,
+  padding: 10,
+  cursor: "pointer",
+  boxShadow:
+    "0 4px 12px rgba(0,0,0,0.08)",
+  transition: "0.2s"
+}}
       >
 
         <div
   style={{
-    fontWeight: "bold",
-    marginBottom: 8,
-    fontSize:
-  window.innerWidth < 600
-    ? 16
-    : 22
-  }}
+  fontWeight: "700",
+  marginBottom: 8,
+  fontSize: 20,
+  color: "#111827"
+}}
 >
   {new Date(dia).getDate()}
 </div>
@@ -1868,8 +1969,11 @@ color:
       style={{
         background: "white",
         padding: 30,
-        borderRadius: 25,
-        width: 450
+        borderRadius: 30,
+boxShadow:
+  "0 15px 40px rgba(0,0,0,0.2)",
+        width: "90%",
+maxWidth: 500
       }}
     >
 
@@ -2094,8 +2198,11 @@ color:
   style={{
     background: "white",
     padding: 30,
-    borderRadius: 25,
-    width: 420,
+    borderRadius: 30,
+boxShadow:
+  "0 15px 40px rgba(0,0,0,0.2)",
+    width: "90%",
+maxWidth: 420,
     boxShadow:
       "0 15px 40px rgba(0,0,0,0.2)"
   }}
@@ -2249,28 +2356,49 @@ color:
 </div>
     </div>
 
-  )}
-
-</>
 
 )}
- {pantalla === "tareas" && (
 
-  <>
+</div>
 
-    <h2
-      style={{
-        marginBottom: 20
-      }}
-    >
-      📝 Tareas
-    </h2>
+)}
+
+{pantalla === "tareas" && (
+
+<div
+  style={{
+    background: "#F0FDF4",
+    minHeight: "100vh",
+    padding: 15
+  }}
+  >
+
+  <h2
+    style={{
+      marginBottom: 20,
+      textAlign: "center",
+      fontSize: 28
+    }}
+  >
+    📝 Tareas
+  </h2>
+
+  <div
+    style={{
+      background: "white",
+      padding: 20,
+      borderRadius: 24,
+      marginBottom: 25,
+      boxShadow:
+        "0 4px 12px rgba(0,0,0,0.08)"
+    }}
+  >
 
     <div
       style={{
         display: "flex",
-        gap: 10,
-        marginBottom: 20
+        flexDirection: "column",
+        gap: 12
       }}
     >
 
@@ -2288,10 +2416,12 @@ color:
           }
         }}
         style={{
-          flex: 1,
-          padding: 12,
-          borderRadius: 12,
-          border: "1px solid #ddd"
+          width: "100%",
+          padding: 14,
+          borderRadius: 14,
+          border: "1px solid #ddd",
+          fontSize: 16,
+          boxSizing: "border-box"
         }}
       />
 
@@ -2304,25 +2434,30 @@ color:
           )
         }
         style={{
-          padding: 12,
-          borderRadius: 12,
+          width: "100%",
+          padding: 14,
+          borderRadius: 14,
           border: "1px solid #ddd",
-          width: 180
+          boxSizing: "border-box"
         }}
       />
+
       <input
-  type="time"
-  value={horaTarea}
-  onChange={(e) =>
-    setHoraTarea(e.target.value)
-  }
-  style={{
-    padding: 12,
-    borderRadius: 12,
-    border: "1px solid #ddd",
-    width: "140px"
-  }}
-/>
+        type="time"
+        value={horaTarea}
+        onChange={(e) =>
+          setHoraTarea(
+            e.target.value
+          )
+        }
+        style={{
+          width: "100%",
+          padding: 14,
+          borderRadius: 14,
+          border: "1px solid #ddd",
+          boxSizing: "border-box"
+        }}
+      />
 
       <button
         onClick={añadirTarea}
@@ -2330,166 +2465,175 @@ color:
           background: "#4CAF50",
           color: "white",
           border: "none",
-          borderRadius: 12,
-          padding: "12px 20px",
-          fontSize: 20,
+          borderRadius: 14,
+          padding: "14px",
+          fontSize: 16,
           fontWeight: "bold",
           cursor: "pointer"
         }}
       >
-        +
+        ➕ Añadir tarea
       </button>
 
     </div>
 
-    {tareas.length === 0 ? (
+  </div>
+
+  {tareas.length === 0 ? (
+
+    <div
+      style={{
+        background: "white",
+        padding: 30,
+        borderRadius: 24,
+        textAlign: "center",
+        color: "#666",
+        boxShadow:
+          "0 4px 12px rgba(0,0,0,0.08)"
+      }}
+    >
+      No hay tareas
+    </div>
+
+  ) : (
+
+    tareas.map((tarea) => (
 
       <div
+        key={tarea.id}
         style={{
-          background: "white",
-          padding: 30,
+          background: tarea.hecha
+            ? "#dff5df"
+            : "white",
+
+          border: tarea.hecha
+            ? "2px solid #4CAF50"
+            : "2px solid transparent",
+
+          padding: 18,
           borderRadius: 20,
-          textAlign: "center",
-          color: "#666"
+          marginBottom: 12,
+
+          boxShadow:
+            "0 4px 12px rgba(0,0,0,0.08)",
+
+          transition: "0.2s"
         }}
       >
-        No hay tareas
-      </div>
-
-    ) : (
-
-      tareas.map((tarea) => (
 
         <div
-  key={tarea.id}
-  style={{
-    background: tarea.hecha
-      ? "#dff5df"
-      : "white",
-
-    border: tarea.hecha
-      ? "2px solid #4CAF50"
-      : "2px solid transparent",
-
-    padding: 15,
-    borderRadius: 15,
-    marginBottom: 10,
-    boxShadow:
-      "0 2px 6px rgba(0,0,0,0.08)",
-
-    transition: "0.2s"
-  }}
->
+          style={{
+            display: "flex",
+            justifyContent:
+              "space-between",
+            alignItems: "center",
+            gap: 12
+          }}
+        >
 
           <div
             style={{
-              display: "flex",
-              justifyContent:
-                "space-between",
-              alignItems: "center",
-              gap: 10
+              flex: 1
             }}
           >
 
             <div
               style={{
-                flex: 1
+                fontSize: 18,
+                fontWeight: 600,
+
+                textDecoration:
+                  tarea.hecha
+                    ? "line-through"
+                    : "none",
+
+                color:
+                  tarea.hecha
+                    ? "#666"
+                    : "#111"
               }}
             >
-
-              <div
-  style={{
-    fontSize: 18,
-    fontWeight: 500,
-
-    textDecoration:
-      tarea.hecha
-        ? "line-through"
-        : "none",
-
-    color:
-      tarea.hecha
-        ? "#666"
-        : "#111",
-
-    transition: "0.2s"
-  }}
->
-  {tarea.texto}
-</div>
-
-              {tarea.fecha && (
-
-              <div
-  style={{
-    fontSize: 13,
-    color: "#666",
-    marginTop: 6
-  }}
->
-  📅 {new Date(tarea.fecha)
-    .toLocaleDateString("es-ES")}
-
-  {tarea.hora &&
-    ` · 🕒 ${tarea.hora}`
-  }
-</div>
-
-              )}
-
+              {tarea.texto}
             </div>
 
-            <button
-  onClick={() =>
-    cambiarEstadoTarea(
-      tarea.id
-    )
-  }
-  style={{
-    background: tarea.hecha
-      ? "#2e7d32"
-      : "#4CAF50",
+            {tarea.fecha && (
 
-    color: "white",
-    border: "none",
-    borderRadius: 10,
-    padding: "8px 12px",
-    cursor: "pointer",
-    minWidth: 50
-  }}
->
-  {tarea.hecha
-    ? "✔"
-    : "-"}
-</button>
+              <div
+                style={{
+                  fontSize: 13,
+                  color: "#666",
+                  marginTop: 8
+                }}
+              >
+                📅 {new Date(
+                  tarea.fecha
+                ).toLocaleDateString(
+                  "es-ES"
+                )}
 
-            <button
-              onClick={() =>
-                eliminarTarea(
-                  tarea.id
-                )
-              }
-              style={{
-                background: "#f44336",
-                color: "white",
-                border: "none",
-                borderRadius: 10,
-                padding: "8px 12px",
-                cursor: "pointer"
-              }}
-            >
-              🗑️
-            </button>
+                {tarea.hora &&
+                  ` · 🕒 ${tarea.hora}`
+                }
+              </div>
+
+            )}
 
           </div>
 
+          <button
+            onClick={() =>
+              cambiarEstadoTarea(
+                tarea.id
+              )
+            }
+            style={{
+              width: 44,
+              height: 44,
+              borderRadius: "50%",
+              background: tarea.hecha
+                ? "#2e7d32"
+                : "#4CAF50",
+
+              color: "white",
+              border: "none",
+              cursor: "pointer",
+              fontSize: 18
+            }}
+          >
+            {tarea.hecha
+              ? "✔"
+              : "✓"}
+          </button>
+
+          <button
+            onClick={() =>
+              eliminarTarea(
+                tarea.id
+              )
+            }
+            style={{
+              width: 44,
+              height: 44,
+              borderRadius: "50%",
+              background: "#f44336",
+              color: "white",
+              border: "none",
+              cursor: "pointer",
+              fontSize: 18
+            }}
+          >
+            🗑️
+          </button>
+
         </div>
 
-      ))
+      </div>
 
-    )}
+    ))
 
-  </>
+  )}
+
+</div>
 
 )}
 
@@ -2498,22 +2642,35 @@ color:
     {/* MENÚ INFERIOR */}
 
     <div
-      style={{
-        display: "flex",
-        background: "white",
-        borderTop:
-          "1px solid #ddd"
-      }}
-    >
+  style={{
+    display: "flex",
+    background: "white",
+    borderTop: "1px solid #ddd",
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    boxShadow: "0 -4px 12px rgba(0,0,0,0.08)"
+  }}
+>
 
       <button
-        onClick={() =>
-          setPantalla("nevera")
-        }
-        style={{
-          flex: 1,
-          padding: 18
-        }}
+  onClick={() =>
+    setPantalla("nevera")
+  }
+  style={{
+    flex: 1,
+    padding: 18,
+    border: "none",
+    background:
+      pantalla === "nevera"
+        ? "#f4dbe8"
+        : "white",
+    fontWeight:
+      pantalla === "nevera"
+        ? "bold"
+        : "normal",
+    transition: "0.2s"
+  }}
+
       >
         🥛
         <br />
@@ -2524,10 +2681,16 @@ color:
         onClick={() =>
           setPantalla("compra")
         }
-        style={{
-          flex: 1,
-          padding: 18
-        }}
+       style={{
+  flex: 1,
+  padding: 18,
+  background:
+    pantalla === "compra"
+      ? "#9FE3B0"
+      : "#E6F8EB",
+  border: "1px solid #b7d9c0",
+  fontWeight: "bold"
+}}
       >
         🛒
         <br />
@@ -2539,9 +2702,15 @@ color:
           setPantalla("calendario")
         }
         style={{
-          flex: 1,
-          padding: 18
-        }}
+  flex: 1,
+  padding: 18,
+  background:
+    pantalla === "calendario"
+      ? "#A9D4FF"
+      : "#EAF4FF",
+  border: "1px solid #b9cfe6",
+  fontWeight: "bold"
+}}
       >
         📅
         <br />
@@ -2553,9 +2722,15 @@ color:
           setPantalla("tareas")
         }
         style={{
-          flex: 1,
-          padding: 18
-        }}
+  flex: 1,
+  padding: 18,
+  background:
+    pantalla === "tareas"
+      ? "#CDB4FF"
+      : "#F0E8FF",
+  border: "1px solid #cfc3e8",
+  fontWeight: "bold"
+}}
       >
         ✅
         <br />
