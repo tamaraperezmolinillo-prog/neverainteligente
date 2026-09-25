@@ -2441,22 +2441,24 @@ maxWidth: 420,
     📅 Fecha límite
   </div>
 
-  <input
-    type="date"
-    value={fechaTarea}
-    onChange={(e) =>
-      setFechaTarea(e.target.value)
-    }
-    style={{
-      width: "100%",
-      padding: 16,
-      borderRadius: 18,
-      border: "2px solid #E5E7EB",
-      background: "#fff",
-      boxSizing: "border-box",
-      fontSize: 17
-    }}
-  />
+ <input
+  type="date"
+  value={fechaTarea}
+  onChange={(e) =>
+    setFechaTarea(e.target.value)
+  }
+  style={{
+    width: "100%",
+    height: 56,
+    borderRadius: 18,
+    border: "2px solid #E5E7EB",
+    backgroundColor: "#FFFFFF",
+    color: "#111827",
+    fontSize: 17,
+    padding: "0 16px",
+    boxSizing: "border-box"
+  }}
+/>
 </div>
 
 <div
@@ -2483,17 +2485,17 @@ maxWidth: 420,
   }
   style={{
     width: "100%",
-    padding: 16,
+    height: 56,
     borderRadius: 18,
     border: "2px solid #E5E7EB",
-    background: "#fff",
-    boxSizing: "border-box",
-    fontSize: 17
+    backgroundColor: "#FFFFFF",
+    color: "#111827",
+    fontSize: 17,
+    padding: "0 16px",
+    boxSizing: "border-box"
   }}
 />
 
-<p>Fecha: {fechaTarea}</p>
-<p>Hora: {horaTarea}</p>
 
       </div>
 
