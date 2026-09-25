@@ -2476,21 +2476,24 @@ maxWidth: 420,
   </div>
 
   <input
-    type="time"
-    value={horaTarea}
-    onChange={(e) =>
-      setHoraTarea(e.target.value)
-    }
-    style={{
-      width: "100%",
-      padding: 16,
-      borderRadius: 18,
-      border: "2px solid #E5E7EB",
-      background: "#fff",
-      boxSizing: "border-box",
-      fontSize: 17
-    }}
-  />
+  type="time"
+  value={horaTarea}
+  onChange={(e) =>
+    setHoraTarea(e.target.value)
+  }
+  style={{
+    width: "100%",
+    padding: 16,
+    borderRadius: 18,
+    border: "2px solid #E5E7EB",
+    background: "#fff",
+    boxSizing: "border-box",
+    fontSize: 17
+  }}
+/>
+
+<p>Fecha: {fechaTarea}</p>
+<p>Hora: {horaTarea}</p>
 
       </div>
 
