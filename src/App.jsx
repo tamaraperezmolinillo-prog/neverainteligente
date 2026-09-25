@@ -2433,17 +2433,6 @@ maxWidth: 420,
   onChange={(e) =>
     setFechaTarea(e.target.value)
   }
-  style={{
-    width: "100%",
-    height: 60,
-    borderRadius: 30,
-    border: "2px solid #D1D5DB",
-    background: "#fff",
-    fontSize: 18,
-    textAlign: "center",
-    boxSizing: "border-box",
-    display: "block"
-  }}
 />
 
 </div>
@@ -2465,23 +2454,12 @@ maxWidth: 420,
   </div>
 
   <input
-    type="time"
-    value={horaTarea}
-    onChange={(e) =>
-      setHoraTarea(e.target.value)
-    }
-    style={{
-      width: "100%",
-      height: 60,
-      borderRadius: 30,
-      border: "2px solid #D1D5DB",
-      background: "#fff",
-      fontSize: 18,
-      textAlign: "center",
-      boxSizing: "border-box",
-      display: "block"
-    }}
-  />
+  type="time"
+  value={horaTarea}
+  onChange={(e) =>
+    setHoraTarea(e.target.value)
+  }
+/>
 
 </div>
 
