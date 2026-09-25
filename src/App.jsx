@@ -2371,7 +2371,7 @@ maxWidth: 420,
     minHeight: "100vh",
     padding: 15
   }}
-  >
+>
 
   <h2
     style={{
@@ -2403,77 +2403,116 @@ maxWidth: 420,
     >
 
       <input
-        value={nuevaTarea}
-        onChange={(e) =>
-          setNuevaTarea(
-            e.target.value
-          )
-        }
-        placeholder="Nueva tarea..."
-        onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            añadirTarea();
-          }
-        }}
-        style={{
-          width: "100%",
-          padding: 14,
-          borderRadius: 14,
-          border: "1px solid #ddd",
-          fontSize: 16,
-          boxSizing: "border-box"
-        }}
-      />
+  value={nuevaTarea}
+  onChange={(e) =>
+    setNuevaTarea(e.target.value)
+  }
+  placeholder="✏️ Escribe una tarea..."
+  onKeyDown={(e) => {
+    if (e.key === "Enter") {
+      añadirTarea();
+    }
+  }}
+  style={{
+    width: "100%",
+    padding: 16,
+    borderRadius: 18,
+    border: "2px solid #E5E7EB",
+    fontSize: 17,
+    background: "#fff",
+    boxSizing: "border-box",
+    outline: "none"
+  }}
+/>
 
-      <input
-        type="date"
-        value={fechaTarea}
-        onChange={(e) =>
-          setFechaTarea(
-            e.target.value
-          )
-        }
-        style={{
-          width: "100%",
-          padding: 14,
-          borderRadius: 14,
-          border: "1px solid #ddd",
-          boxSizing: "border-box"
-        }}
-      />
+<div
+  style={{
+    marginTop: 15
+  }}
+>
+  <div
+    style={{
+      fontSize: 15,
+      fontWeight: "600",
+      marginBottom: 8,
+      color: "#4B5563"
+    }}
+  >
+    📅 Fecha límite
+  </div>
 
-      <input
-        type="time"
-        value={horaTarea}
-        onChange={(e) =>
-          setHoraTarea(
-            e.target.value
-          )
-        }
-        style={{
-          width: "100%",
-          padding: 14,
-          borderRadius: 14,
-          border: "1px solid #ddd",
-          boxSizing: "border-box"
-        }}
-      />
+  <input
+    type="date"
+    value={fechaTarea}
+    onChange={(e) =>
+      setFechaTarea(e.target.value)
+    }
+    style={{
+      width: "100%",
+      padding: 16,
+      borderRadius: 18,
+      border: "2px solid #E5E7EB",
+      background: "#fff",
+      boxSizing: "border-box",
+      fontSize: 17
+    }}
+  />
+</div>
+
+<div
+  style={{
+    marginTop: 15
+  }}
+>
+  <div
+    style={{
+      fontSize: 15,
+      fontWeight: "600",
+      marginBottom: 8,
+      color: "#4B5563"
+    }}
+  >
+    ⏰ Hora aviso
+  </div>
+
+  <input
+    type="time"
+    value={horaTarea}
+    onChange={(e) =>
+      setHoraTarea(e.target.value)
+    }
+    style={{
+      width: "100%",
+      padding: 16,
+      borderRadius: 18,
+      border: "2px solid #E5E7EB",
+      background: "#fff",
+      boxSizing: "border-box",
+      fontSize: 17
+    }}
+  />
+
+      </div>
 
       <button
-        onClick={añadirTarea}
-        style={{
-          background: "#4CAF50",
-          color: "white",
-          border: "none",
-          borderRadius: 14,
-          padding: "14px",
-          fontSize: 16,
-          fontWeight: "bold",
-          cursor: "pointer"
-        }}
-      >
-        ➕ Añadir tarea
-      </button>
+  onClick={añadirTarea}
+  style={{
+    width: "100%",
+    background:
+      "linear-gradient(135deg,#4CAF50,#43A047)",
+    color: "white",
+    border: "none",
+    borderRadius: 18,
+    padding: "16px",
+    fontSize: 18,
+    fontWeight: "bold",
+    cursor: "pointer",
+    boxShadow:
+      "0 4px 12px rgba(76,175,80,0.35)"
+  }}
+>
+  ➕ Añadir tarea
+</button>
 
     </div>
 
