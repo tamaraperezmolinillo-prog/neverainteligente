@@ -2413,54 +2413,59 @@ maxWidth: 420,
 
 <div
   style={{
-    marginTop: 15
+    display: "flex",
+    gap: 15,
+    marginTop: 15,
+    marginBottom: 15
   }}
 >
-  <div
-    style={{
-      fontSize: 15,
-      fontWeight: "600",
-      marginBottom: 8,
-      color: "#4B5563"
-    }}
-  >
-   📅 Fecha límite
-</div>
+  <div style={{ flex: 1 }}>
+    <div
+      style={{
+        fontSize: 15,
+        fontWeight: "600",
+        marginBottom: 8,
+        color: "#4B5563"
+      }}
+    >
+      📅 Fecha
+    </div>
 
-<input
-  type="date"
-  value={fechaTarea}
-  onChange={(e) =>
-    setFechaTarea(e.target.value)
-  }
-/>
-
-</div>
-
-<div
-  style={{
-    marginTop: 15
-  }}
->
-  <div
-    style={{
-      fontSize: 15,
-      fontWeight: "600",
-      marginBottom: 8,
-      color: "#4B5563"
-    }}
-  >
-    ⏰ Hora aviso
+    <input
+      type="date"
+      value={fechaTarea}
+      onChange={(e) =>
+        setFechaTarea(e.target.value)
+      }
+      style={{
+        width: "100%"
+      }}
+    />
   </div>
 
-  <input
-  type="time"
-  value={horaTarea}
-  onChange={(e) =>
-    setHoraTarea(e.target.value)
-  }
-/>
+  <div style={{ flex: 1 }}>
+    <div
+      style={{
+        fontSize: 15,
+        fontWeight: "600",
+        marginBottom: 8,
+        color: "#4B5563"
+      }}
+    >
+      ⏰ Hora
+    </div>
 
+    <input
+      type="time"
+      value={horaTarea}
+      onChange={(e) =>
+        setHoraTarea(e.target.value)
+      }
+      style={{
+        width: "100%"
+      }}
+    />
+  </div>
 </div>
 
 
