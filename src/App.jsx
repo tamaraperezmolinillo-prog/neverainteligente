@@ -2448,16 +2448,17 @@ maxWidth: 420,
     setFechaTarea(e.target.value)
   }
   style={{
-    width: "100%",
-    height: 56,
-    borderRadius: 18,
-    border: "2px solid #E5E7EB",
-    backgroundColor: "#FFFFFF",
-    color: "#111827",
-    fontSize: 17,
-    padding: "0 16px",
-    boxSizing: "border-box"
-  }}
+  width: "calc(100% - 4px)",
+  height: 56,
+  display: "block",
+  margin: "0 auto",
+  borderRadius: 18,
+  border: "2px solid #E5E7EB",
+  backgroundColor: "#FFFFFF",
+  color: "#111827",
+  fontSize: 17,
+  boxSizing: "border-box"
+}}
 />
 </div>
 
@@ -2483,17 +2484,18 @@ maxWidth: 420,
   onChange={(e) =>
     setHoraTarea(e.target.value)
   }
-  style={{
-    width: "100%",
-    height: 56,
-    borderRadius: 18,
-    border: "2px solid #E5E7EB",
-    backgroundColor: "#FFFFFF",
-    color: "#111827",
-    fontSize: 17,
-    padding: "0 16px",
-    boxSizing: "border-box"
-  }}
+style={{
+  width: "calc(100% - 4px)",
+  height: 56,
+  display: "block",
+  margin: "0 auto",
+  borderRadius: 18,
+  border: "2px solid #E5E7EB",
+  backgroundColor: "#FFFFFF",
+  color: "#111827",
+  fontSize: 17,
+  boxSizing: "border-box"
+}}
 />
 
 
@@ -2502,19 +2504,17 @@ maxWidth: 420,
       <button
   onClick={añadirTarea}
   style={{
-    width: "100%",
-    background:
-      "linear-gradient(135deg,#4CAF50,#43A047)",
-    color: "white",
-    border: "none",
-    borderRadius: 18,
-    padding: "16px",
-    fontSize: 18,
-    fontWeight: "bold",
-    cursor: "pointer",
-    boxShadow:
-      "0 4px 12px rgba(76,175,80,0.35)"
-  }}
+  width: "calc(100% - 4px)",
+  height: 56,
+  display: "block",
+  margin: "0 auto",
+  borderRadius: 18,
+  border: "2px solid #E5E7EB",
+  backgroundColor: "#FFFFFF",
+  color: "#111827",
+  fontSize: 17,
+  boxSizing: "border-box"
+}}
 >
   ➕ Añadir tarea
 </button>
