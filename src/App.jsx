@@ -2414,15 +2414,17 @@ maxWidth: 420,
     }
   }}
   style={{
-    width: "100%",
-    padding: 16,
-    borderRadius: 18,
-    border: "2px solid #E5E7EB",
-    fontSize: 17,
-    background: "#fff",
-    boxSizing: "border-box",
-    outline: "none"
-  }}
+  width: "calc(100% - 4px)",
+  height: 56,
+  display: "block",
+  margin: "0 auto",
+  borderRadius: 18,
+  border: "2px solid #E5E7EB",
+  backgroundColor: "#FFFFFF",
+  color: "#111827",
+  fontSize: 17,
+  boxSizing: "border-box"
+}}
 />
 
 <div
@@ -2528,6 +2530,7 @@ style={{
     <div
       style={{
         background: "white",
+        width: "calc(100% - 4px)",
         padding: 30,
         borderRadius: 24,
         textAlign: "center",
