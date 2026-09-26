@@ -995,7 +995,7 @@ return (
   <div
     style={{
       minHeight: "100vh",
-      paddingTop: 85,
+      paddingTop: 60,
       background: "#f3f4f6",
       fontFamily: "Arial, sans-serif",
       display: "flex",
@@ -1010,7 +1010,7 @@ return (
     <div
       style={{
         flex: 1,
-        padding: 12
+        padding: 8
       }}
     >
 
@@ -1019,7 +1019,7 @@ return (
   style={{
     background: "#F0FDF4",
     minHeight: "100vh",
-    padding: 15
+    padding: 7
   }}
 >
 <>
@@ -1046,7 +1046,7 @@ return (
           : "#d8f3dc",
 
       borderRadius: 24,
-      padding: 20,
+      padding: 16,
       marginBottom: 25,
       fontWeight: "600",
       fontSize: 10,
@@ -1087,7 +1087,7 @@ return (
       boxShadow:
         "0 4px 12px rgba(0,0,0,0.08)",
       border: "1px solid #e5e7eb",
-      padding: 20,
+      padding: 16,
       borderRadius: 20,
       marginBottom: 25
     }}
@@ -1113,7 +1113,7 @@ return (
       }
       style={{
         width: "100%",
-        padding: 14,
+        padding: 10,
         borderRadius: 14,
         border: "1px solid #ddd",
         fontSize: 10,
@@ -1151,27 +1151,27 @@ return (
             background: "#f3f4f6"
           }}
         >
-          <th style={{ padding: 14 }}>
+          <th style={{ padding: 10 }}>
             Producto
           </th>
 
-          <th style={{ padding: 14 }}>
+          <th style={{ padding: 10 }}>
             Ubicación
           </th>
 
-          <th style={{ padding: 14 }}>
+          <th style={{ padding: 10 }}>
             Cantidad
           </th>
 
-          <th style={{ padding: 14 }}>
+          <th style={{ padding: 10 }}>
             Caducidad
           </th>
 
-          <th style={{ padding: 14 }}>
+          <th style={{ padding: 10 }}>
             Días
           </th>
 
-          <th style={{ padding: 14 }}>
+          <th style={{ padding: 10 }}>
             Acción
           </th>
         </tr>
@@ -1209,7 +1209,7 @@ return (
 
                 <td
                   style={{
-                    padding: 12,
+                    padding: 8,
                     fontWeight: 600
                   }}
                 >
@@ -1217,7 +1217,7 @@ return (
                   {producto.nombre}
                 </td>
 
-                <td style={{ padding: 12 }}>
+                <td style={{ padding: 8 }}>
 
                   {producto.ubicacion === "Nevera" &&
                     "🥛 Nevera"}
@@ -1285,7 +1285,7 @@ return (
 
                 </td>
 
-                <td style={{ padding: 12 }}>
+                <td style={{ padding: 8 }}>
                   {formatearFecha(
                     producto.caducidad
                   )}
@@ -1318,7 +1318,7 @@ return (
                       border: "none",
                       borderRadius: 10,
                       padding:
-                        "8px 12px",
+                        "4px 8px",
                       cursor: "pointer",
                       fontWeight: "600"
                     }}
@@ -1350,7 +1350,7 @@ return (
   style={{
     background: "#F0FDF4",
     minHeight: "100vh",
-    padding: 15
+    padding: 11
   }}
 >
 
@@ -1369,7 +1369,7 @@ return (
   <div
     style={{
       background: "white",
-      padding: 20,
+      padding: 16,
       borderRadius: 24,
       marginBottom: 20,
       boxShadow:
@@ -1395,7 +1395,7 @@ return (
         }
         style={{
           width: "100%",
-          padding: 14,
+          padding: 10,
           borderRadius: 14,
           border: "1px solid #ddd",
           fontSize: 10,
@@ -1415,7 +1415,7 @@ return (
             flex: 1,
             background: "#ff9800",
             color: "white",
-            padding: "14px",
+            padding: "10px",
             borderRadius: 14,
             cursor: "pointer",
             fontWeight: "bold",
@@ -1444,7 +1444,7 @@ return (
           }
           style={{
             width: 80,
-            padding: 14,
+            padding: 10,
             borderRadius: 14,
             border: "1px solid #ddd",
             textAlign: "center"
@@ -1460,7 +1460,7 @@ return (
           color: "white",
           border: "none",
           borderRadius: 14,
-          padding: "14px",
+          padding: "10px",
           cursor: "pointer",
           fontSize: 10,
           fontWeight: "bold"
@@ -1480,7 +1480,7 @@ return (
     <div
       style={{
         background: "white",
-        padding: 30,
+        padding: 26,
         borderRadius: 24,
         textAlign: "center",
         color: "#666",
@@ -1521,7 +1521,7 @@ return (
 
             <th
               style={{
-                padding: 15,
+                padding: 11,
                 textAlign: "center"
               }}
             >
@@ -1530,7 +1530,7 @@ return (
 
             <th
               style={{
-                padding: 15,
+                padding: 11,
                 textAlign: "center"
               }}
             >
@@ -1539,7 +1539,7 @@ return (
 
             <th
               style={{
-                padding: 15,
+                padding: 11,
                 textAlign: "center"
               }}
             >
@@ -1565,7 +1565,7 @@ return (
               <td
                 style={{
                   textAlign: "center",
-                  padding: 15,
+                  padding: 11,
                   fontWeight: 600
                 }}
               >
@@ -1575,7 +1575,7 @@ return (
               <td
                 style={{
                   textAlign: "center",
-                  padding: 15,
+                  padding: 11,
                   fontWeight: "bold",
                   fontSize: 12
                 }}
@@ -1586,7 +1586,7 @@ return (
               <td
                 style={{
                   textAlign: "center",
-                  padding: 15
+                  padding: 11
                 }}
               >
 
@@ -1630,8 +1630,8 @@ return (
                     }
                     title="Cancelar"
                     style={{
-                      width: 42,
-                      height: 42,
+                      width: 32,
+                      height: 32,
                       borderRadius: "50%",
                       border: "none",
                       background: "#f44336",
@@ -1669,7 +1669,7 @@ return (
   style={{
     background: "#F0FDF4",
     minHeight: "100vh",
-    padding: 15
+    padding: 11
   }}
   >
   <h2
@@ -1691,7 +1691,7 @@ return (
     alignItems: "center",
     marginBottom: 25,
     background: "white",
-    padding: 20,
+    padding: 16,
     borderRadius: 24,
     boxShadow:
       "0 4px 12px rgba(0,0,0,0.08)"
@@ -1716,8 +1716,8 @@ return (
 
     }}
     style={{
-  width: 48,
-  height: 48,
+  width: 38,
+  height: 38,
   borderRadius: "50%",
   border: "none",
   background: "#f3f4f6",
@@ -1770,7 +1770,7 @@ return (
     style={{
       border: "none",
       background: "#f3f4f6",
-      padding: "10px 15px",
+      padding: "6px 11px",
       borderRadius: 10,
       cursor: "pointer"
     }}
@@ -1797,7 +1797,7 @@ return (
           style={{
   textAlign: "center",
   fontWeight: "700",
-  padding: 10,
+  padding: 6,
   color: "#6b7280",
   fontSize: 8
 }}
@@ -1820,7 +1820,7 @@ return (
        style={{
   background: "#fff",
   borderRadius: 14,
-  height: 90,
+  height: 80,
   width: "100%",
   padding: 4,
   overflow: "hidden",
@@ -2003,7 +2003,7 @@ color:
     <div
       style={{
         background: "white",
-        padding: 30,
+        padding: 26,
         borderRadius: 30,
 boxShadow:
   "0 15px 40px rgba(0,0,0,0.2)",
@@ -2050,7 +2050,7 @@ maxWidth: 500
             ? "white"
             : "#333",
 
-        padding: 10,
+        padding: 6,
         borderRadius: 10,
         marginBottom: 10,
 
@@ -2185,7 +2185,7 @@ maxWidth: 500
             color: "white",
             border: "none",
             borderRadius: 12,
-            padding: 12
+            padding: 8
           }}
         >
           ➕ Añadir evento
@@ -2197,7 +2197,7 @@ maxWidth: 500
           }
           style={{
             flex: 1,
-            padding: 12,
+            padding: 8,
             borderRadius: 12
           }}
         >
@@ -2232,7 +2232,7 @@ maxWidth: 500
       <div
   style={{
     background: "white",
-    padding: 30,
+    padding: 26,
     borderRadius: 30,
 boxShadow:
   "0 15px 40px rgba(0,0,0,0.2)",
@@ -2271,7 +2271,7 @@ maxWidth: 420,
     }
     style={{
       width: "100%",
-      padding: 14,
+      padding: 10,
       borderRadius: 12,
       border: "1px solid #ddd",
       marginBottom: 20,
@@ -2289,7 +2289,7 @@ maxWidth: 420,
   }
   style={{
     width: "100%",
-    padding: "16px 18px",
+    padding: "12px 14px",
     borderRadius: 16,
     border: "2px solid #e5e7eb",
     background: "#f9fafb",
@@ -2328,8 +2328,8 @@ maxWidth: 420,
         setColorEvento(color)
       }
       style={{
-        width: 36,
-        height: 36,
+        width: 26,
+        height: 26,
         borderRadius: "50%",
         background: color,
         cursor: "pointer",
@@ -2358,7 +2358,7 @@ maxWidth: 420,
       onClick={añadirEvento}
       style={{
         flex: 1,
-        padding: 14,
+        padding: 10,
         background: "#4CAF50",
         color: "white",
         border: "none",
@@ -2376,7 +2376,7 @@ maxWidth: 420,
       }
       style={{
         flex: 1,
-        padding: 14,
+        padding: 10,
         background: "#f3f4f6",
         border: "1px solid #ddd",
         borderRadius: 12,
@@ -2404,7 +2404,7 @@ maxWidth: 420,
   style={{
     background: "#F0FDF4",
     minHeight: "100vh",
-    padding: 15
+    padding: 11
   }}
 >
 
@@ -2421,7 +2421,7 @@ maxWidth: 420,
   <div
     style={{
       background: "white",
-      padding: 20,
+      padding: 16,
       borderRadius: 24,
       marginBottom: 25,
       boxShadow:
@@ -2451,7 +2451,7 @@ maxWidth: 420,
   style={{
   width: "100%",
   height: 72,
-  padding: "0 24px",
+  padding: "0 20px",
   borderRadius: 36,
   border: "2px solid #D1D5DB",
   background: "#fff",
@@ -2524,7 +2524,7 @@ maxWidth: 420,
   style={{
   width: "100%",
   height: 72,
-  padding: "0 24px",
+  padding: "0 20px",
   borderRadius: 36,
   border: "2px solid #D1D5DB",
   background: "#fff",
@@ -2545,7 +2545,7 @@ maxWidth: 420,
       style={{
   width: "100%",
   height: 72,
-  padding: "0 24px",
+  padding: "0 20px",
   borderRadius: 36,
   border: "2px solid #D1D5DB",
   background: "#fff",
@@ -2571,7 +2571,7 @@ maxWidth: 420,
             ? "2px solid #4CAF50"
             : "2px solid transparent",
 
-          padding: 18,
+          padding: 14,
           borderRadius: 20,
           marginBottom: 12,
 
@@ -2648,8 +2648,8 @@ maxWidth: 420,
               )
             }
             style={{
-              width: 44,
-              height: 44,
+              width: 34,
+              height: 34,
               borderRadius: "50%",
               background: tarea.hecha
                 ? "#2e7d32"
@@ -2673,8 +2673,8 @@ maxWidth: 420,
               )
             }
             style={{
-              width: 44,
-              height: 44,
+              width: 34,
+              height: 34,
               borderRadius: "50%",
               background: "#f44336",
               color: "white",
@@ -2723,7 +2723,7 @@ maxWidth: 420,
   }
   style={{
   flex: 1,
-  padding: 8,
+  padding: 4,
   background:
     pantalla === "nevera"
       ? "#ffb4f9"
@@ -2744,7 +2744,7 @@ maxWidth: 420,
         }
        style={{
   flex: 1,
-  padding: 8,
+  padding: 4,
   background:
     pantalla === "compra"
       ? "#9FE3B0"
@@ -2764,7 +2764,7 @@ maxWidth: 420,
         }
         style={{
   flex: 1,
-  padding: 8,
+  padding: 4,
   background:
     pantalla === "calendario"
       ? "#A9D4FF"
@@ -2784,7 +2784,7 @@ maxWidth: 420,
         }
         style={{
   flex: 1,
-  padding: 8,
+  padding: 4,
   background:
     pantalla === "tareas"
       ? "#CDB4FF"
@@ -2819,9 +2819,9 @@ maxWidth: 420,
     <div
       style={{
         background: "white",
-        padding: 30,
+        padding: 26,
         borderRadius: 20,
-        width: 420,
+        width: 410,
         boxShadow:
           "0 10px 30px rgba(0,0,0,0.2)"
       }}
@@ -2860,7 +2860,7 @@ maxWidth: 420,
         placeholder="Cantidad"
         style={{
           width: "100%",
-          padding: 14,
+          padding: 10,
           borderRadius: 12,
           border: "1px solid #ddd",
           marginBottom: 15,
@@ -2878,7 +2878,7 @@ maxWidth: 420,
         }
         style={{
           width: "100%",
-          padding: 14,
+          padding: 10,
           borderRadius: 12,
           border: "1px solid #ddd",
           marginBottom: 15,
@@ -2895,7 +2895,7 @@ maxWidth: 420,
         }
         style={{
           width: "100%",
-          padding: 14,
+          padding: 10,
           borderRadius: 12,
           border: "1px solid #ddd",
           marginBottom: 20,
@@ -2926,7 +2926,7 @@ maxWidth: 420,
           onClick={confirmarCompra}
           style={{
             flex: 1,
-            padding: 14,
+            padding: 10,
             background: "#4CAF50",
             color: "white",
             border: "none",
@@ -2946,7 +2946,7 @@ maxWidth: 420,
           }
           style={{
             flex: 1,
-            padding: 14,
+            padding: 10,
             borderRadius: 12,
             border:
               "1px solid #d1d5db",
