@@ -1028,7 +1028,7 @@ return (
     style={{
       marginBottom: 20,
       textAlign: "center",
-      fontSize: 28
+      fontSize: 20
     }}
   >
     🥛 Nevera
@@ -1049,7 +1049,7 @@ return (
       padding: 20,
       marginBottom: 25,
       fontWeight: "600",
-      fontSize: 16,
+      fontSize: 10,
       lineHeight: 1.5,
       textAlign: "center",
       boxShadow:
@@ -1116,7 +1116,7 @@ return (
         padding: 14,
         borderRadius: 14,
         border: "1px solid #ddd",
-        fontSize: 16,
+        fontSize: 10,
         boxSizing: "border-box"
       }}
     />
@@ -1358,7 +1358,7 @@ return (
     style={{
       marginBottom: 20,
       textAlign: "center",
-      fontSize: 28
+      fontSize: 20
     }}
   >
     🛒 Lista de la compra
@@ -1398,7 +1398,7 @@ return (
           padding: 14,
           borderRadius: 14,
           border: "1px solid #ddd",
-          fontSize: 16,
+          fontSize: 10,
           boxSizing: "border-box"
         }}
       />
@@ -1462,7 +1462,7 @@ return (
           borderRadius: 14,
           padding: "14px",
           cursor: "pointer",
-          fontSize: 16,
+          fontSize: 10,
           fontWeight: "bold"
         }}
       >
@@ -1577,7 +1577,7 @@ return (
                   textAlign: "center",
                   padding: 15,
                   fontWeight: "bold",
-                  fontSize: 18
+                  fontSize: 12
                 }}
               >
                 {item.cantidad || 1}
@@ -1612,7 +1612,7 @@ return (
                       background: "#4CAF50",
                       color: "white",
                       cursor: "pointer",
-                      fontSize: 20,
+                      fontSize: 15,
                       fontWeight: "bold"
                     }}
                   >
@@ -1637,7 +1637,7 @@ return (
                       background: "#f44336",
                       color: "white",
                       cursor: "pointer",
-                      fontSize: 20,
+                      fontSize: 15,
                       fontWeight: "bold"
                     }}
                   >
@@ -1676,7 +1676,7 @@ return (
   style={{
     marginBottom: 20,
     textAlign: "center",
-    fontSize: 28,
+    fontSize: 20,
     fontWeight: "700",
     color: "#111827"
   }}
@@ -1722,7 +1722,7 @@ return (
   border: "none",
   background: "#f3f4f6",
   cursor: "pointer",
-  fontSize: 18,
+  fontSize: 12,
   fontWeight: "bold"
 }}
   >
@@ -1733,7 +1733,7 @@ return (
    style={{
   margin: 0,
   textTransform: "capitalize",
-  fontSize: 22,
+  fontSize: 15,
   fontWeight: "700",
   color: "#111827"
 }}
@@ -1799,7 +1799,7 @@ return (
   fontWeight: "700",
   padding: 10,
   color: "#6b7280",
-  fontSize: 13
+  fontSize: 8
 }}
         >
           {dia}
@@ -1834,7 +1834,7 @@ return (
   style={{
   fontWeight: "700",
   marginBottom: 8,
-  fontSize: 20,
+  fontSize: 15,
   color: "#111827"
 }}
 >
@@ -1909,8 +1909,8 @@ color:
       marginBottom: 4,
       fontSize:
   window.innerWidth < 600
-    ? 9
-    : 12,
+    ? 6
+    : 8,
 
       overflow: "hidden",
       textOverflow: "ellipsis",
@@ -1952,7 +1952,7 @@ color:
 
   <div
     style={{
-      fontSize: 11,
+      fontSize: 7,
       fontWeight: "bold",
       color: "#4CAF50",
       marginTop: 4
@@ -2066,7 +2066,7 @@ maxWidth: 500
 
           <div
             style={{
-              fontSize: 12,
+              fontSize: 9,
               marginBottom: 4
             }}
           >
@@ -2293,7 +2293,7 @@ maxWidth: 420,
     borderRadius: 16,
     border: "2px solid #e5e7eb",
     background: "#f9fafb",
-    fontSize: 18,
+    fontSize: 12,
     fontWeight: "600",
     color: "#374151",
     marginBottom: 20,
@@ -2412,7 +2412,7 @@ maxWidth: 420,
     style={{
       marginBottom: 20,
       textAlign: "center",
-      fontSize: 28
+      fontSize: 20
     }}
   >
     📝 Tareas
@@ -2455,7 +2455,7 @@ maxWidth: 420,
   borderRadius: 36,
   border: "2px solid #D1D5DB",
   background: "#fff",
-  fontSize: 17,
+  fontSize: 11,
   boxSizing: "border-box"
 }}
 />
@@ -2471,7 +2471,7 @@ maxWidth: 420,
   <div style={{ flex: 1 }}>
     <div
       style={{
-        fontSize: 15,
+        fontSize: 8,
         fontWeight: "600",
         marginBottom: 8,
         color: "#4B5563"
@@ -2495,7 +2495,7 @@ maxWidth: 420,
   <div style={{ flex: 1 }}>
     <div
       style={{
-        fontSize: 15,
+        fontSize: 8,
         fontWeight: "600",
         marginBottom: 8,
         color: "#4B5563"
@@ -2528,7 +2528,7 @@ maxWidth: 420,
   borderRadius: 36,
   border: "2px solid #D1D5DB",
   background: "#fff",
-  fontSize: 17,
+  fontSize: 11,
   boxSizing: "border-box"
 }}
 >
@@ -2549,7 +2549,7 @@ maxWidth: 420,
   borderRadius: 36,
   border: "2px solid #D1D5DB",
   background: "#fff",
-  fontSize: 17,
+  fontSize: 11,
   boxSizing: "border-box"
 }}
     >
@@ -2600,7 +2600,7 @@ maxWidth: 420,
 
             <div
               style={{
-                fontSize: 18,
+                fontSize: 12,
                 fontWeight: 600,
 
                 textDecoration:
@@ -2621,7 +2621,7 @@ maxWidth: 420,
 
               <div
                 style={{
-                  fontSize: 13,
+                  fontSize: 9,
                   color: "#666",
                   marginTop: 8
                 }}
@@ -2658,7 +2658,7 @@ maxWidth: 420,
               color: "white",
               border: "none",
               cursor: "pointer",
-              fontSize: 18
+              fontSize: 12
             }}
           >
             {tarea.hecha
@@ -2680,7 +2680,7 @@ maxWidth: 420,
               color: "white",
               border: "none",
               cursor: "pointer",
-              fontSize: 18
+              fontSize: 12
             }}
           >
             🗑️
@@ -2831,7 +2831,7 @@ maxWidth: 420,
         style={{
           marginTop: 0,
           marginBottom: 10,
-          fontSize: 24
+          fontSize: 20
         }}
       >
         🛒 Producto comprado
@@ -2841,7 +2841,7 @@ maxWidth: 420,
         style={{
           marginTop: 0,
           marginBottom: 20,
-          fontSize: 18,
+          fontSize: 8,
           color: "#374151"
         }}
       >
