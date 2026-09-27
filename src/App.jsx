@@ -1599,7 +1599,7 @@ return (
   style={{
     background: "#F0FDF4",
     minHeight: "100vh",
-    padding: 11
+    padding: 4
   }}
   >
   <h2
@@ -1715,7 +1715,7 @@ return (
   display: "grid",
   gridTemplateColumns:
     "repeat(7, 1fr)",
-  gap: 8
+  gap: 2
 }}
 >
 
@@ -1748,10 +1748,19 @@ return (
 
 }}
        style={{
-  background: "#fff",
+  background:
+  dia === new Date().toISOString().split("T")[0]
+    ? "#DCFCE7"
+    : "#fff",
+
+border:
+  dia === new Date().toISOString().split("T")[0]
+    ? "2px solid #22C55E"
+    : "1px solid #E5E7EB",
   borderRadius: 5,
-  height: 150,
-  width: "100%",
+  aspectRatio: "1 / 1",
+width: "100%",
+minHeight: 0,
   padding: 6,
   overflow: "hidden",
   display: "flex",
@@ -1764,7 +1773,7 @@ return (
   style={{
   fontWeight: "700",
   marginBottom: 8,
-  fontSize: 17,
+  fontSize: 12,
   color: "#111827"
 }}
 >
@@ -1815,7 +1824,7 @@ return (
 
 })
 
-.slice(0, 3)
+.slice(0, 2)
 
 .map((item) => (
 
@@ -1835,12 +1844,10 @@ color:
     : "#333",
 
       borderRadius: 8,
-      padding: "4px 8px",
+      padding: "2px 4px",
+marginBottom: 2,
       marginBottom: 4,
-      fontSize:
-  window.innerWidth < 600
-    ? 12
-    : 12,
+      fontSize: 9,
 
       overflow: "hidden",
       textOverflow: "ellipsis",
@@ -2023,7 +2030,7 @@ maxWidth: 500
       <div
         style={{
           display: "flex",
-          gap: 8
+          gap: 2
         }}
       >
 
@@ -2040,7 +2047,8 @@ maxWidth: 500
               color: "white",
               border: "none",
               borderRadius: 8,
-              padding: "4px 8px",
+              padding: "2px 4px",
+marginBottom: 2,
               cursor: "pointer"
             }}
           >
