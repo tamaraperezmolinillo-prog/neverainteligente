@@ -1116,7 +1116,7 @@ return (
         padding: 10,
         borderRadius: 14,
         border: "1px solid #ddd",
-        fontSize: 10,
+        fontSize: 14,
         boxSizing: "border-box"
       }}
     />
@@ -1364,8 +1364,6 @@ return (
     🛒 Lista de la compra
   </h2>
 
-  {/* AÑADIR PRODUCTO */}
-
   <div
     style={{
       background: "white",
@@ -1398,60 +1396,12 @@ return (
           padding: 10,
           borderRadius: 14,
           border: "1px solid #ddd",
-          fontSize: 10,
+          fontSize: 15,
           boxSizing: "border-box"
         }}
       />
 
-      <div
-        style={{
-          display: "flex",
-          gap: 10
-        }}
-      >
-
-        <label
-          style={{
-            flex: 1,
-            background: "#ff9800",
-            color: "white",
-            padding: "10px",
-            borderRadius: 14,
-            cursor: "pointer",
-            fontWeight: "bold",
-            textAlign: "center"
-          }}
-        >
-          📦 Escanear
-
-          <input
-            type="file"
-            accept="image/*"
-            capture="environment"
-            onChange={escanearFoto}
-            hidden
-          />
-        </label>
-
-        <input
-          type="number"
-          min="1"
-          value={cantidadDeseada}
-          onChange={(e) =>
-            setCantidadDeseada(
-              Number(e.target.value)
-            )
-          }
-          style={{
-            width: 80,
-            padding: 10,
-            borderRadius: 14,
-            border: "1px solid #ddd",
-            textAlign: "center"
-          }}
-        />
-
-      </div>
+      <div style={{ height: 1 }} />
 
       <button
         onClick={añadirCompra}
@@ -1462,7 +1412,7 @@ return (
           borderRadius: 14,
           padding: "10px",
           cursor: "pointer",
-          fontSize: 10,
+          fontSize: 14,
           fontWeight: "bold"
         }}
       >
@@ -1472,8 +1422,6 @@ return (
     </div>
 
   </div>
-
-  {/* SIN PRODUCTOS */}
 
   {compra.length === 0 ? (
 
@@ -1506,7 +1454,6 @@ return (
       <table
         style={{
           width: "100%",
-          minWidth: "500px",
           borderCollapse: "collapse"
         }}
       >
@@ -1526,15 +1473,6 @@ return (
               }}
             >
               Producto
-            </th>
-
-            <th
-              style={{
-                padding: 11,
-                textAlign: "center"
-              }}
-            >
-              Cantidad
             </th>
 
             <th
@@ -1575,17 +1513,6 @@ return (
               <td
                 style={{
                   textAlign: "center",
-                  padding: 11,
-                  fontWeight: "bold",
-                  fontSize: 12
-                }}
-              >
-                {item.cantidad || 1}
-              </td>
-
-              <td
-                style={{
-                  textAlign: "center",
                   padding: 11
                 }}
               >
@@ -1601,12 +1528,15 @@ return (
                   <button
                     onClick={() => {
                       setProductoComprado(item);
+                      setCantidadCompra(
+                        item.cantidad || 1
+                      );
                       setMostrarModalCompra(true);
                     }}
                     title="Comprado"
                     style={{
-                      width: 42,
-                      height: 42,
+                      width: 32,
+                      height: 32,
                       borderRadius: "50%",
                       border: "none",
                       background: "#4CAF50",
@@ -1689,7 +1619,7 @@ return (
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 25,
+    marginBottom: 20,
     background: "white",
     padding: 16,
     borderRadius: 24,
@@ -1717,12 +1647,12 @@ return (
     }}
     style={{
   width: 38,
-  height: 38,
+  height: 25,
   borderRadius: "50%",
   border: "none",
   background: "#f3f4f6",
   cursor: "pointer",
-  fontSize: 12,
+  fontSize: 15,
   fontWeight: "bold"
 }}
   >
@@ -1733,8 +1663,8 @@ return (
    style={{
   margin: 0,
   textTransform: "capitalize",
-  fontSize: 15,
-  fontWeight: "700",
+  fontSize: 20,
+  fontWeight: "600",
   color: "#111827"
 }}
   >
@@ -1796,10 +1726,10 @@ return (
           key={dia}
           style={{
   textAlign: "center",
-  fontWeight: "700",
+  fontWeight: "500",
   padding: 6,
   color: "#6b7280",
-  fontSize: 8
+  fontSize: 15
 }}
         >
           {dia}
@@ -1819,10 +1749,10 @@ return (
 }}
        style={{
   background: "#fff",
-  borderRadius: 14,
-  height: 80,
+  borderRadius: 5,
+  height: 150,
   width: "100%",
-  padding: 4,
+  padding: 6,
   overflow: "hidden",
   display: "flex",
   flexDirection: "column",
@@ -1834,7 +1764,7 @@ return (
   style={{
   fontWeight: "700",
   marginBottom: 8,
-  fontSize: 15,
+  fontSize: 17,
   color: "#111827"
 }}
 >
@@ -1909,8 +1839,8 @@ color:
       marginBottom: 4,
       fontSize:
   window.innerWidth < 600
-    ? 6
-    : 8,
+    ? 12
+    : 12,
 
       overflow: "hidden",
       textOverflow: "ellipsis",
@@ -2421,12 +2351,15 @@ maxWidth: 420,
   <div
     style={{
       background: "white",
-      padding: 16,
-      borderRadius: 24,
-      marginBottom: 25,
+      padding: 10,
+      borderRadius: 14,
+      marginBottom: 18,
+      border: "1px solid #ddd",
+      boxSizing: "border-box",
       boxShadow:
         "0 4px 12px rgba(0,0,0,0.08)"
     }}
+
   >
 
     <div
@@ -2450,9 +2383,9 @@ maxWidth: 420,
   }}
   style={{
   width: "100%",
-  height: 72,
+  height: 48,
   padding: "0 20px",
-  borderRadius: 36,
+  borderRadius: 26,
   border: "2px solid #D1D5DB",
   background: "#fff",
   fontSize: 11,
@@ -2471,7 +2404,7 @@ maxWidth: 420,
   <div style={{ flex: 1 }}>
     <div
       style={{
-        fontSize: 8,
+        fontSize: 14,
         fontWeight: "600",
         marginBottom: 8,
         color: "#4B5563"
@@ -2495,7 +2428,7 @@ maxWidth: 420,
   <div style={{ flex: 1 }}>
     <div
       style={{
-        fontSize: 8,
+        fontSize: 14,
         fontWeight: "600",
         marginBottom: 8,
         color: "#4B5563"
@@ -2512,6 +2445,7 @@ maxWidth: 420,
       }
       style={{
         width: "100%"
+        
       }}
     />
   </div>
@@ -2523,12 +2457,12 @@ maxWidth: 420,
   onClick={añadirTarea}
   style={{
   width: "100%",
-  height: 72,
+  height: 30,
   padding: "0 20px",
   borderRadius: 36,
   border: "2px solid #D1D5DB",
   background: "#fff",
-  fontSize: 11,
+  fontSize: 15,
   boxSizing: "border-box"
 }}
 >
@@ -2841,7 +2775,7 @@ maxWidth: 420,
         style={{
           marginTop: 0,
           marginBottom: 20,
-          fontSize: 8,
+          fontSize: 20,
           color: "#374151"
         }}
       >
@@ -2853,9 +2787,9 @@ maxWidth: 420,
         min="1"
         value={cantidadCompra}
         onChange={(e) =>
-          setCantidadCompra(
-            e.target.value
-          )
+         setCantidadCompra(
+  Number(e.target.value)
+)
         }
         placeholder="Cantidad"
         style={{
