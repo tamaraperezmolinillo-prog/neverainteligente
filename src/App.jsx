@@ -1049,7 +1049,7 @@ return (
       padding: 16,
       marginBottom: 25,
       fontWeight: "600",
-      fontSize: 10,
+      fontSize: 15,
       lineHeight: 1.5,
       textAlign: "center",
       boxShadow:
@@ -2229,7 +2229,7 @@ maxWidth: 420,
     width: "100%",
     padding: "12px 14px",
     borderRadius: 16,
-    border: "2px solid #e5e7eb",
+    border: "px solid #e5e7eb",
     background: "#f9fafb",
     fontSize: 12,
     fontWeight: "600",
@@ -2378,85 +2378,60 @@ maxWidth: 420,
       }}
     >
 
-      <input
-  value={nuevaTarea}
-  onChange={(e) =>
-    setNuevaTarea(e.target.value)
-  }
-  placeholder="✏️ Escribe una tarea..."
-  onKeyDown={(e) => {
-    if (e.key === "Enter") {
-      añadirTarea();
-    }
-  }}
-  style={{
-  width: "100%",
-  height: 48,
-  padding: "0 20px",
-  borderRadius: 26,
-  border: "2px solid #D1D5DB",
-  background: "#fff",
-  fontSize: 11,
-  boxSizing: "border-box"
-}}
-/>
+      
 
 <div
   style={{
     display: "flex",
-    gap: 15,
-    marginTop: 15,
-    marginBottom: 15
+    gap: 8,
+    alignItems: "center"
   }}
 >
-  <div style={{ flex: 1 }}>
-    <div
-      style={{
-        fontSize: 14,
-        fontWeight: "600",
-        marginBottom: 8,
-        color: "#4B5563"
-      }}
-    >
-      📅 Fecha
-    </div>
 
-    <input
-      type="date"
-      value={fechaTarea}
-      onChange={(e) =>
-        setFechaTarea(e.target.value)
+  <input
+    value={nuevaTarea}
+    onChange={(e) =>
+      setNuevaTarea(e.target.value)
+    }
+    placeholder="✏️ Tarea..."
+    onKeyDown={(e) => {
+      if (e.key === "Enter") {
+        añadirTarea();
       }
-      style={{
-        width: "100%"
-      }}
-    />
-  </div>
+    }}
+    style={{
+      flex: 1,
+      height: 42,
+      padding: "0 14px",
+      borderRadius: 12,
+      border: "2px solid #D1D5DB",
+      fontSize: 12,
+      boxSizing: "border-box"
+    }}
+  />
 
-  <div style={{ flex: 1 }}>
-    <div
-      style={{
-        fontSize: 14,
-        fontWeight: "600",
-        marginBottom: 8,
-        color: "#4B5563"
-      }}
-    >
-      ⏰ Hora
-    </div>
+  <input
+    type="date"
+    value={fechaTarea}
+    onChange={(e) =>
+      setFechaTarea(e.target.value)
+    }
+    style={{
+      width: 110
+    }}
+  />
 
-    <input
-      type="time"
-      value={horaTarea}
-      onChange={(e) =>
-        setHoraTarea(e.target.value)
-      }
-      style={{
-        width: "100%"
-        
-      }}
-    />
-  </div>
+  <input
+    type="time"
+    value={horaTarea}
+    onChange={(e) =>
+      setHoraTarea(e.target.value)
+    }
+    style={{
+      width: 85
+    }}
+  />
+
 </div>
 
 
@@ -2484,15 +2459,21 @@ maxWidth: 420,
   {tareas.length === 0 ? (
 
     <div
-      style={{
-  width: "100%",
-  height: 72,
-  padding: "0 20px",
-  borderRadius: 36,
+     style={{
+  background: "white",
+  minHeight: 120,
+  borderRadius: 20,
   border: "2px solid #D1D5DB",
-  background: "#fff",
-  fontSize: 11,
-  boxSizing: "border-box"
+  padding: 20,
+  textAlign: "center",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: 14,
+  fontWeight: "600",
+  color: "#6B7280",
+  boxSizing: "border-box",
+  width: "100%"
 }}
     >
       No hay tareas
@@ -2500,139 +2481,146 @@ maxWidth: 420,
 
   ) : (
 
-    tareas.map((tarea) => (
+   tareas.map((tarea) => (
+
+  <div
+    key={tarea.id}
+    style={{
+      background: tarea.hecha
+        ? "#dff5df"
+        : "white",
+
+      border: tarea.hecha
+        ? "2px solid #4CAF50"
+        : "2px solid transparent",
+
+      padding: 14,
+      borderRadius: 20,
+      marginBottom: 12,
+
+      boxShadow:
+        "0 4px 12px rgba(0,0,0,0.08)",
+
+      transition: "0.2s"
+    }}
+  >
+
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 10
+      }}
+    >
 
       <div
-        key={tarea.id}
         style={{
-          background: tarea.hecha
-            ? "#dff5df"
-            : "white",
-
-          border: tarea.hecha
-            ? "2px solid #4CAF50"
-            : "2px solid transparent",
-
-          padding: 14,
-          borderRadius: 20,
-          marginBottom: 12,
-
-          boxShadow:
-            "0 4px 12px rgba(0,0,0,0.08)",
-
-          transition: "0.2s"
+          flex: 1,
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          overflow: "hidden"
         }}
       >
 
         <div
           style={{
-            display: "flex",
-            justifyContent:
-              "space-between",
-            alignItems: "center",
-            gap: 12
+            fontSize: 12,
+            fontWeight: 600,
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+
+            textDecoration:
+              tarea.hecha
+                ? "line-through"
+                : "none",
+
+            color:
+              tarea.hecha
+                ? "#666"
+                : "#111"
           }}
         >
+          {tarea.texto}
+        </div>
+
+        {tarea.fecha && (
 
           <div
             style={{
-              flex: 1
+              fontSize: 10,
+              color: "#666",
+              whiteSpace: "nowrap"
             }}
           >
-
-            <div
-              style={{
-                fontSize: 12,
-                fontWeight: 600,
-
-                textDecoration:
-                  tarea.hecha
-                    ? "line-through"
-                    : "none",
-
-                color:
-                  tarea.hecha
-                    ? "#666"
-                    : "#111"
-              }}
-            >
-              {tarea.texto}
-            </div>
-
-            {tarea.fecha && (
-
-              <div
-                style={{
-                  fontSize: 9,
-                  color: "#666",
-                  marginTop: 8
-                }}
-              >
-                📅 {new Date(
-                  tarea.fecha
-                ).toLocaleDateString(
-                  "es-ES"
-                )}
-
-                {tarea.hora &&
-                  ` · 🕒 ${tarea.hora}`
-                }
-              </div>
-
+            📅 {new Date(
+              tarea.fecha
+            ).toLocaleDateString(
+              "es-ES"
             )}
 
+            {tarea.hora &&
+              ` · ⏰ ${tarea.hora}`
+            }
           </div>
 
-          <button
-            onClick={() =>
-              cambiarEstadoTarea(
-                tarea.id
-              )
-            }
-            style={{
-              width: 34,
-              height: 34,
-              borderRadius: "50%",
-              background: tarea.hecha
-                ? "#2e7d32"
-                : "#4CAF50",
-
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-              fontSize: 12
-            }}
-          >
-            {tarea.hecha
-              ? "✔"
-              : "✓"}
-          </button>
-
-          <button
-            onClick={() =>
-              eliminarTarea(
-                tarea.id
-              )
-            }
-            style={{
-              width: 34,
-              height: 34,
-              borderRadius: "50%",
-              background: "#f44336",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-              fontSize: 12
-            }}
-          >
-            🗑️
-          </button>
-
-        </div>
+        )}
 
       </div>
 
-    ))
+      <button
+        onClick={() =>
+          cambiarEstadoTarea(
+            tarea.id
+          )
+        }
+        style={{
+          width: 34,
+          height: 34,
+          borderRadius: "50%",
+          background: tarea.hecha
+            ? "#2e7d32"
+            : "#4CAF50",
+
+          color: "white",
+          border: "none",
+          cursor: "pointer",
+          fontSize: 12,
+          flexShrink: 0
+        }}
+      >
+        {tarea.hecha
+          ? "✔"
+          : "✓"}
+      </button>
+
+      <button
+        onClick={() =>
+          eliminarTarea(
+            tarea.id
+          )
+        }
+        style={{
+          width: 34,
+          height: 34,
+          borderRadius: "50%",
+          background: "#f44336",
+          color: "white",
+          border: "none",
+          cursor: "pointer",
+          fontSize: 12,
+          flexShrink: 0
+        }}
+      >
+        🗑️
+      </button>
+
+    </div>
+
+  </div>
+
+))
 
   )}
 
@@ -2645,18 +2633,18 @@ maxWidth: 420,
     {/* MENÚ INFERIOR */}
 
     <div
-  style={{
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    height: 75,
-    display: "flex",
-    background: "white",
-    borderBottom: "1px solid #ddd",
-    boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-    zIndex: 9999
-  }}
+style={{
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  height: 50,
+  display: "flex",
+  background: "white",
+  borderBottom: "1px solid #ddd",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+  zIndex: 9999
+}}
 >
 
       <button
@@ -2665,19 +2653,19 @@ maxWidth: 420,
   }
   style={{
   flex: 1,
-  padding: 4,
+  padding: 2,
   background:
     pantalla === "nevera"
       ? "#ffb4f9"
       : "#ffe8f5",
   border: "1px solid #e8c3e7",
-  fontWeight: "bold"
+  fontWeight: "600",
+  fontSize: 13,
+lineHeight: 1.1
 }}
 
       >
-        🥛
-        <br />
-        Nevera
+        🥛 Nevera
       </button>
 
       <button
@@ -2686,17 +2674,19 @@ maxWidth: 420,
         }
        style={{
   flex: 1,
-  padding: 4,
+  padding: 2,
   background:
     pantalla === "compra"
       ? "#9FE3B0"
       : "#E6F8EB",
   border: "1px solid #b7d9c0",
-  fontWeight: "bold"
+  fontWeight: "600",
+  fontSize: 13,
+lineHeight: 1.1
 }}
       >
         🛒
-        <br />
+     
         Compra
       </button>
 
@@ -2706,17 +2696,19 @@ maxWidth: 420,
         }
         style={{
   flex: 1,
-  padding: 4,
+  padding: 2,
   background:
     pantalla === "calendario"
       ? "#A9D4FF"
       : "#EAF4FF",
   border: "1px solid #b9cfe6",
-  fontWeight: "bold"
+  fontWeight: "600",
+  fontSize: 13,
+lineHeight: 1.1
 }}
       >
         📅
-        <br />
+      
         Calendario
       </button>
 
@@ -2726,17 +2718,19 @@ maxWidth: 420,
         }
         style={{
   flex: 1,
-  padding: 4,
+  padding: 2,
   background:
     pantalla === "tareas"
       ? "#CDB4FF"
       : "#F0E8FF",
   border: "1px solid #cfc3e8",
-  fontWeight: "bold"
+  fontWeight: "600",
+  fontSize: 13,
+lineHeight: 1.1
 }}
       >
         📝
-        <br />
+       
         Tareas
       </button>
 

@@ -13,6 +13,7 @@
     "@ericblade/quagga2": "^1.12.1",
     "@zxing/browser": "^0.2.1",
     "dexie": "^4.4.6",
+    "firebase": "^12.19.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tesseract.js": "^7.0.0"
